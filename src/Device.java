@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-public abstract class Device
+public abstract class Device implements  Soldable
 {
     protected int number;
     protected String producer;
@@ -80,5 +80,11 @@ public abstract class Device
     public void setWorth(BigDecimal worth)
     {
         this.worth = worth;
+    }
+
+    @Override
+    public String Sell()
+    {
+        return  this.getWorth().toString();
     }
 }

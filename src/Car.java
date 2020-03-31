@@ -75,4 +75,5 @@ public class Car extends Device
     {
         seats = seatsM;
     }
+
 }

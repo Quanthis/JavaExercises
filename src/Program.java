@@ -3,8 +3,7 @@ import java.math.BigDecimal;
 
 public class Program
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws Exception {
         Animal dog = new Animal("Husky", "myDog", new BigDecimal(4), new File("somedog.jpg"));
 
         System.out.println( dog.getName() + " is " + dog.getSpecies() + " weight's " + dog.getWeight() + " kg.");
@@ -39,6 +38,22 @@ public class Program
         someCar.setProducer("Unknown");
 
         System.out.println(someCar.getProducer());
+
+        var someAnimal = new Animal("Doggo", "Pushek", new BigDecimal(150.23), new File(""), true, new BigDecimal(1500.100900));
+
+        System.out.println("Phone worth: " + somePhone.Sell() + "\nCar worth: " + someCar.Sell() + "\nAnimal worth: " + someAnimal.Sell());
+
+        someAnimal.beEaten();
+
+        someCar.Sell();
+
+        var hmm = new Human();
+        hmm.Sell();
+
+
+        var hm = new Human();
+        hm.beEaten();
+
     }
 
 }

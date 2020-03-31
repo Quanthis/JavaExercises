@@ -4,13 +4,14 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Animal
+public class Animal implements  Soldable, Edible
 {
     private String species;
     private String name;
     private BigDecimal weight;
     private File pic;
     private boolean isAlive;
+    private BigDecimal worth;
 
     Animal(String speciesC, String nameC, BigDecimal weightC, File pictureC)
     {
@@ -19,6 +20,15 @@ public class Animal
         weight = weightC;
         pic = pictureC;
         isAlive = true;
+    }
+
+    public Animal(String species, String name, BigDecimal weight, File pic, boolean isAlive, BigDecimal worth) {
+        this.species = species;
+        this.name = name;
+        this.weight = weight;
+        this.pic = pic;
+        this.isAlive = isAlive;
+        this.worth = worth;
     }
 
     public String getSpecies()
@@ -104,5 +114,28 @@ public class Animal
             return;
         }
         System.out.println("I'm not hungry");
+    }
+
+    @Override
+    public String Sell()
+    {
+        return getWorth().toString();
+    }
+
+    public BigDecimal getWorth()
+    {
+        return worth;
+    }
+
+    public void setWorth(BigDecimal worth)
+    {
+        this.worth = worth;
+    }
+
+    @Override
+    public void beEaten()
+    {
+        System.out.println(this.name + " was eaten. ");
+        this.isAlive = false;
     }
 }

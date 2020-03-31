@@ -1,4 +1,4 @@
-public class Human
+public class Human implements  Edible, Soldable
 {
     private String name;
     private String surname;
@@ -20,6 +20,12 @@ public class Human
         salary = salaryC;
         car = carC;
     }
+
+    public Human()
+    {
+
+    }
+
 
     public String getName()
     {
@@ -99,5 +105,17 @@ public class Human
     public void setCar(Car car)
     {
         car = car;
+    }
+
+    @Override
+    public void beEaten() throws Exception
+    {
+        throw new Exception("You can't eat humans.");
+    }
+
+    @Override
+    public String Sell() throws Exception
+    {
+        throw new Exception("You can't sell humans. ");
     }
 }
