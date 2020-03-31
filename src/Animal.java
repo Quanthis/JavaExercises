@@ -92,7 +92,7 @@ public class Animal
             isAlive = false;
             return false;
         }
-        System.out.println("Animal is alive");
+        System.out.println("Animal lives... yet");
         return true;
     }
 

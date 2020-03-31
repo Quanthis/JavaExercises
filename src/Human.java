@@ -1,4 +1,5 @@
-public class Human {
+public class Human
+{
     private String name;
     private String surname;
     private Double age;

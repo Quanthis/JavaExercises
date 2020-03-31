@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-public class Car
+public class Car extends Device
 {
     private String type;
     private String name;
@@ -15,6 +15,15 @@ public class Car
         code = codeC;
         km_state = km_stateC;
         seats = seatsC;
+    }
+
+    public Car(int number, String producer, BigDecimal worth, String type, String name, String code, BigDecimal km_state, Integer seats) {
+        super(number, producer, worth);
+        this.type = type;
+        this.name = name;
+        this.code = code;
+        this.km_state = km_state;
+        this.seats = seats;
     }
 
     public String getType()

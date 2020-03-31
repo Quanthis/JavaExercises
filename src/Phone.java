@@ -1,4 +1,7 @@
-public class Phone {
+import java.math.BigDecimal;
+
+public class Phone extends Device
+{
     private Integer number;
     private String net;
     private Integer dialling_code;
@@ -17,10 +20,14 @@ public class Phone {
         dialling_code = dialling_codeC;
     }
 
-    public Integer getNumber()
+    public Phone(int number, String producer, BigDecimal worth, Integer number1, String net, Integer dialling_code)
     {
-        return number;
+        super(number, producer, worth);
+        this.number = number1;
+        this.net = net;
+        this.dialling_code = dialling_code;
     }
+
 
     public void setNumber(Integer numberM)
     {
